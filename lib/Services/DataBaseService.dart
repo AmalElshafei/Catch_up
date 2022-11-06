@@ -4,8 +4,11 @@ class DataBaseService {
   //الاي دي الخاص باليوزر
     final String? uid;
    DataBaseService({this.uid});
+   //نوخذ انستنس من الفيرستور
+    //اذا موجودة الكوليكشن بيروح عليها اذا لا بيعملها اوتومتيك
     final CollectionReference userCollection =
     FirebaseFirestore.instance.collection("users");
+    //كمان كولكيشن لتخزين بيانات القروب
     final CollectionReference groupCollection =
     FirebaseFirestore.instance.collection("groups");
    Future savingUserData(String fullName, String email) async {
